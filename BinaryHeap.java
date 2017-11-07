@@ -3,8 +3,6 @@
  * Practice Assignment 6
  * 11/6/2017
  * 
- * COMMIT 1: Basic/Advanced tests passed, outofmemoryerror is being thrown
- * 
  */
 
 
@@ -13,7 +11,7 @@ import java.util.NoSuchElementException;
 public class BinaryHeap {
 
 	public int[] heap;
-	int size = 0;
+	public int size = 0;
 
 	public BinaryHeap() {
 		heap = new int[10];
@@ -22,7 +20,7 @@ public class BinaryHeap {
 	
 	//adds instance to end of heap, adjusts heap accordingly.
 	public void add(int i) {
-		if(isFull() == false) {
+		if(isFull()) {
 			  reSize();
 		}
 		heap[size++] = i;
